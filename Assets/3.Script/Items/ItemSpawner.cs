@@ -1,10 +1,12 @@
+using System.Collections;
 using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
 {
     public GameObject itemPrefab; // 생성할 아이템 프리팹
     public Camera mainCamera;
-    public float spawnZ;
+    public int spawnZ = 30;
+    [Tooltip("초(sec)")]public float spawnInterval = 1f; // 스폰 간격 (초)
 
 
 
@@ -14,14 +16,25 @@ public class ItemSpawner : MonoBehaviour
         {
             mainCamera = Camera.main;
         }
-        SpwanItem();
+        StartCoroutine(SpawnItemRoutine());
+        
+    }
+
+   
+     private IEnumerator SpawnItemRoutine()
+    {
+        while (true)
+        {
+            SpwanItem();
+            yield return new WaitForSeconds(spawnInterval);
+        }
     }
 
 
-    void SpwanItem()
+    private void SpwanItem()
     {
 
-           // 1. 랜덤한 뷰포트 좌표 (화면 내)
+        // 1. 랜덤한 뷰포트 좌표 (화면 내)
         Vector2 randomViewportPos = new Vector2(Random.value, Random.value);
 
         // 2. Viewport 좌표를 월드 좌표로 변환 (z는 카메라에서의 거리)
