@@ -5,19 +5,41 @@ using UnityEngine;
 public class ObstacleController : MonoBehaviour
 {
     public ObstacleData oData;
+    private Vector3 randomRotationAxis;
+
+    void Awake()
+    {
+        randomRotationAxis = Random.insideUnitSphere.normalized;
+        if (randomRotationAxis == Vector3.zero)
+            randomRotationAxis = Vector3.up;
+
+        // Debug.Log($"장애물 생성! 회전 축: {randomRotationAxis.x:F2}, {randomRotationAxis.y:F2}, {randomRotationAxis.z:F2}");
+    }
+
+
+    void Update()
+    {
+        transform.Rotate(randomRotationAxis, oData.rotationSpeed * Time.deltaTime);
+    }
+
+
+
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Player")
         {
-            
+
             if (oData.ot == ObstacleType.TEMP1)
             {
-                Debug.Log("Obstacle]TEMP1");
+                Debug.Log($"Obstacle]HP{oData.minusHP}");
+
             }
             if (oData.ot == ObstacleType.TEMP2)
             {
-                Debug.Log("Obstacle]TEMP2");
+                Debug.Log($"Obstacle]Score {oData.minusScore}");
             }
         }
+        Destroy(gameObject);
     }
 }
+

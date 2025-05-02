@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnObstacle : MonoBehaviour
 {
+    [SerializeField] PlayerBehaviour2 player;
     public List<GameObject> obstaclePrefabs;
     public Transform spawnObstacle; //생성된 옵스타클 프리팹이 들어갈 부모
     public Camera mainCamera;
@@ -11,11 +12,13 @@ public class SpawnObstacle : MonoBehaviour
 
     public void SpwanObstacle()
     {
-        Vector2 randomViewportPos = new Vector2(Random.value, Random.value);
+        float randomXAxis = Random.Range(player.movementLimits.x, player.movementLimits.width + player.movementLimits.x);
+        float randomYAxis = Random.Range(-player.yAxisLimit, player.yAxisLimit);
 
-        Vector3 worldPos = mainCamera.ViewportToWorldPoint(new Vector3(randomViewportPos.x, randomViewportPos.y, spawnZ));
+        Vector3 randomPos = new Vector3(randomXAxis, randomYAxis, spawnZ);
+
 
         GameObject prefab = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Count)];
-        Instantiate(prefab, worldPos, Quaternion.identity, spawnObstacle);
+        Instantiate(prefab, randomPos, Quaternion.identity, spawnObstacle);
     }
 }

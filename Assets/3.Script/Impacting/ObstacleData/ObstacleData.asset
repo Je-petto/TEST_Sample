@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c8ebae84d4c6a4b81265252e94c2b2, type: 3}
   m_Name: ObstacleData
   m_EditorClassIdentifier: 
-  it: 0
+  ot: 1
   minusScore: -10
-  minusHP: 10
+  minusHP: 0
+  rotationSpeed: 50

@@ -15,3 +15,4 @@ MonoBehaviour:
   it: 1
   pulsScore: 10
   plusHP: 10
+  rotationSpeed: 50
