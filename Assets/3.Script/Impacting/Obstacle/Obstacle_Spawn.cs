@@ -6,10 +6,10 @@ using UnityEngine;
 public class ObstacleWeight
 {
     public GameObject obstaclePrefab;  // 아이템 프리팹
-    public int spawnWeight;        // 아이템의 스폰 가중치
+    [Tooltip("스폰 확률 가중치 (높을수록 잘 나옴)")]public int spawnWeight;        // 아이템의 스폰 가중치
     public ObstacleData obstacleData;  // 해당 아이템데이터 정보
 }
-public class SpawnObstacle : MonoBehaviour
+public class Obstacle_Spawn : MonoBehaviour
 {
     [SerializeField] PlayerBehaviour2 player;
     public List<ObstacleWeight> obstacleDataList; // 각 아이템의 데이터 리스트 

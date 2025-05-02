@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ObstacleType {NONE, DAMAGE, SCORE, }
 public class ObstacleController : MonoBehaviour
 {
     public ObstacleData oData;
@@ -29,14 +30,14 @@ public class ObstacleController : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
 
-            if (oData.ot == ObstacleType.TEMP1)
+            if (oData.ot == ObstacleType.DAMAGE)
             {
-                Debug.Log($"Obstacle]HP{oData.minusHP}");
+                Debug.Log($"Obstacle]HP{oData.ot}");
 
             }
-            if (oData.ot == ObstacleType.TEMP2)
+            if (oData.ot == ObstacleType.SCORE)
             {
-                Debug.Log($"Obstacle]Score {oData.minusScore}");
+                Debug.Log($"Obstacle]Score {oData.ot}");
             }
         }
         Destroy(gameObject);

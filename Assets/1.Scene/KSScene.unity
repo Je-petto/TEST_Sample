@@ -750,7 +750,7 @@ MonoBehaviour:
   obstacleDataList:
   - obstaclePrefab: {fileID: 2567436008724339852, guid: f904b605dfc002c4f958a1ccfc406cac, type: 3}
     spawnWeight: 3
-    obstacleData: {fileID: 11400000, guid: e48255d708315134b9da42c4ef9dcb1e, type: 2}
+    obstacleData: {fileID: 11400000, guid: ada052b6e3eb20045a68b2e62ed8d3a0, type: 2}
   - obstaclePrefab: {fileID: 2567436008724339852, guid: 015ecbeae3b764e46a13901c5023553e, type: 3}
     spawnWeight: 7
     obstacleData: {fileID: 11400000, guid: 74c18034a3720124caf6bdf1c691f945, type: 2}
@@ -773,10 +773,10 @@ MonoBehaviour:
   itemDataList:
   - itemPrefab: {fileID: 2509240274580890357, guid: 37fd74f0ba392f6459a066b1a6f0b4ac, type: 3}
     spawnWeight: 3
-    itemData: {fileID: 11400000, guid: e83fb33caf5d28040bdbd9c90c50a104, type: 2}
+    itemData: {fileID: 11400000, guid: e4dedf42fa31f9e4bb90cecd0bcee3bb, type: 2}
   - itemPrefab: {fileID: 2509240274580890357, guid: d69d29ebc61ed7f4ea6e9ca154b499bf, type: 3}
     spawnWeight: 7
-    itemData: {fileID: 11400000, guid: 9743c79454ace5e4fb2c28f81ef59cc6, type: 2}
+    itemData: {fileID: 11400000, guid: 409e3bfc003430c4a8f71a3060a6acce, type: 2}
   SpawnItems: {fileID: 2060933916}
   mainCamera: {fileID: 167925667}
   spawnZ: 50

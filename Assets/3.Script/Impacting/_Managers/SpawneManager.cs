@@ -6,8 +6,8 @@ public class SpawneManager : MonoBehaviour
 {
 
 
-    public SpawnItem spawnItem;
-    public SpawnObstacle spawnObstacle;
+    public Item_Spawn spawnItem;
+    public Obstacle_Spawn spawnObstacle;
     private float spawnInterval = 1f; // 기본스폰 간격 (초)
     public float spawnSpeed = 1f; // 숫자가 높아지면 스폰이 많이됨
 

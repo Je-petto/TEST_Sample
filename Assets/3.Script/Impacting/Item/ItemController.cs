@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public enum ItemType { NONE, COIN, HP, }
 
 public class ItemController : MonoBehaviour
 {
-    public ItemData idata;
+    public ItemData itemData;
     private Vector3 randomRotationAxis;
+    
     void Awake()
     {
         randomRotationAxis = Random.insideUnitSphere.normalized;
@@ -18,7 +20,8 @@ public class ItemController : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(randomRotationAxis, idata.rotationSpeed * Time.deltaTime);
+        transform.Rotate(randomRotationAxis, itemData.rotationSpeed * Time.deltaTime);
+
     }
 
 
@@ -28,11 +31,11 @@ public class ItemController : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
 
-            if (idata.it == ItemType.COIN)
+            if (itemData.it == ItemType.COIN)
             {
                 Debug.Log($"ITEM]COIN+{ItemType.COIN}");
             }
-            if (idata.it == ItemType.HP)
+            if (itemData.it == ItemType.HP)
             {
                 Debug.Log($"ITEM]HP+{ItemType.HP}");
             }
