@@ -9,6 +9,5 @@ public class SceneStart : MonoBehaviour
         // Debug.Log("탭 투 스타트");
 
         SceneManager.LoadScene(2,LoadSceneMode.Single);
-        SoundMG.Instance.PlaySFX(null, true);
     }
 }
