@@ -14,7 +14,7 @@ public class RankingManager : MonoBehaviour
     [System.Serializable]
     public class PlayerData
     {
-        public string playerName;
+        public string playerID;
         public int score;
     }
 
@@ -38,21 +38,21 @@ public class RankingManager : MonoBehaviour
     {
         currentPlayer = new PlayerData
         {
-            playerName = name,
+            playerID = name,
             score = totalScore
         };
     }
 
     public int OnSaveButtonClicked()
     {
-        if (currentPlayer == null || string.IsNullOrWhiteSpace(currentPlayer.playerName))
+        if (currentPlayer == null || string.IsNullOrWhiteSpace(currentPlayer.playerID))
         {
-            Debug.LogWarning("⚠️ 플레이어 정보가 비어 있습니다.");
+            Debug.LogWarning("플레이어 정보가 비어 있습니다.");
             return -1;
         }
 
         // 중복 이름 있으면 기존 데이터 덮어쓰기
-        var existing = rankingData.rankings.Find(p => p.playerName == currentPlayer.playerName);
+        var existing = rankingData.rankings.Find(p => p.playerID == currentPlayer.playerID);
         if (existing != null)
         {
             existing.score = currentPlayer.score;
@@ -71,7 +71,7 @@ public class RankingManager : MonoBehaviour
         UpdateRankingUI();
 
         // 현재 플레이어 순위 계산
-        int rank = rankingData.rankings.FindIndex(p => p.playerName == currentPlayer.playerName);
+        int rank = rankingData.rankings.FindIndex(p => p.playerID == currentPlayer.playerID);
         return (rank >= 0) ? rank + 1 : -1;
     }
 
@@ -92,7 +92,7 @@ public class RankingManager : MonoBehaviour
     {
         string json = JsonUtility.ToJson(rankingData, true);
         File.WriteAllText(filePath, json);
-        Debug.Log("✅ 랭킹 데이터 저장 완료: " + filePath);
+        Debug.Log("랭킹 데이터 저장 완료: " + filePath);
     }
 
     private void UpdateRankingUI()
@@ -109,7 +109,7 @@ public class RankingManager : MonoBehaviour
             entry.SetActive(true);
 
             TMP_Text text = entry.GetComponent<TMP_Text>();
-            text.text = $"{i + 1}위: {rankingData.rankings[i].playerName} - {rankingData.rankings[i].score}";
+            text.text = $"{i + 1}위: {rankingData.rankings[i].playerID} - {rankingData.rankings[i].score}";
         }
     }
 }

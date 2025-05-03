@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerInfoPanel : MonoBehaviour
 {
     [Header("입력 데이터 (Inspector에서 설정)")]
-    public string playerName;
+    public string playerID;
     public int distanceScore;
     public int itemScore;
 
@@ -23,14 +23,14 @@ public class PlayerInfoPanel : MonoBehaviour
         int totalScore = distanceScore + itemScore;
 
         // UI에 포맷팅된 텍스트 표시
-        nameText.text = $"Player Name : {playerName}";
+        nameText.text = $"Player ID : {playerID}";
         distanceText.text = $"Distance : {distanceScore}";
         itemScoreText.text = $"Item Score : {itemScore}";
         totalScoreText.text = $"Total Score : {totalScore}";
 
         // 랭킹 정보 설정 및 저장
-        rankingManager.SetCurrentPlayerData(playerName, totalScore);
+        rankingManager.SetCurrentPlayerData(playerID, totalScore);
         int playerRank = rankingManager.OnSaveButtonClicked();
-        rankingNumText.text = playerRank > 0 ? $"Rank : {playerRank}" : "Rank : N/A";
+        rankingNumText.text = playerRank > 0 ? $"Rank : {playerRank}" : "UNRANKED";
     }
 }
