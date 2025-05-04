@@ -13,7 +13,6 @@ public class SoundMG : MonoBehaviour
     public AudioSource BGMaudio, SFXaudio;
     [SerializeField] private AudioClip ButtonClip;
     
-
     public void Awake()
     { 
         if( Instance == null)
@@ -46,46 +45,5 @@ public class SoundMG : MonoBehaviour
             BGMaudio.loop =true;
             BGMaudio.Play();
         }
-        // else
-        // {
-        //     ($"Scene {Scene_i}에 BGM 클립이 할당되지 않았습니다.");
-        // }
     }
-
-    // void Start()
-    // {
-    //     if( BGMaudio == null || SFXaudio == null)
-    //     {
-    //         AudioSource[] audioSources = GetComponentsInChildren<AudioSource>();
-    //         foreach( var a in audioSources)
-    //         {
-    //             if( a != BGMaudio && BGMaudio == null) BGMaudio = a;
-    //             else if ( a != SFXaudio &&  SFXaudio == null) SFXaudio = a;
-    //         }
-    //     }
-    //     if(BGMaudio == null)
-    //         GetComponentInChildren<AudioSource>();
-    //     if(SFXaudio == null)
-    //         GetComponentInChildren<AudioSource>();   
-    // }
-    
-    // public void PlayBGM(AudioClip clip, bool IsChangeScene)
-    // {
-    //     if(IsChangeScene)
-    //         for( int i = 0; i < scenesClip.Count; i++)
-    //             if(SceneManager.GetActiveScene().buildIndex == i)
-    //                 BGMaudio.PlayOneShot(scenesClip[i]);
-    //     else
-    //         BGMaudio.PlayOneShot(clip);
-    // }
-    
-    // public void PlaySFX(AudioClip clip , bool IsButton)
-    // {
-    //     if(IsButton)
-    //         SFXaudio.PlayOneShot(ButtonClip);
-    //     else
-    //         SFXaudio.PlayOneShot(clip);
-    // }
-
-
 }
