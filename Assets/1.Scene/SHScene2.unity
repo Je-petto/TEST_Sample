@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 250833724}
   - component: {fileID: 250833723}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: PopupManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -983,7 +983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1276957502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1300,7 +1300,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 80, y: 80}
-  m_Spacing: {x: 70, y: 70}
+  m_Spacing: {x: 150, y: 100}
   m_Constraint: 1
   m_ConstraintCount: 5
 --- !u!1 &2145770232

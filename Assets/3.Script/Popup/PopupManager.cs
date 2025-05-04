@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class GameManager : MonoBehaviour
+public class PopupManager : MonoBehaviour
 {
     [Header("버튼 관련")]
     public GameObject buttonTemplate;
