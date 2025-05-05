@@ -15,8 +15,13 @@ public class SceneMG : MonoBehaviour
         SceneManager.LoadScene(1,LoadSceneMode.Single);
     }
 
-    // public void IngameScene()
-    // {
-    //     SceneManager.LoadScene(0,LoadSceneMode.Single);
-    // }
+    public void LoadingScene()
+    {
+        SceneManager.LoadScene(3,LoadSceneMode.Single);
+    }
+    
+    public void IngameScene()
+    {
+        SceneManager.LoadScene(4,LoadSceneMode.Single);
+    }
 }

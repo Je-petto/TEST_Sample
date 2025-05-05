@@ -817,6 +817,34 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2669867616223651076, guid: 27367bdd5d3313b4d8cdb64e2e3f0868, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2669867616223651076, guid: 27367bdd5d3313b4d8cdb64e2e3f0868, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2669867616223651076, guid: 27367bdd5d3313b4d8cdb64e2e3f0868, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 3310465414877125738, guid: d9b4f8f6c2ab5ac4dbf32849a2e29162, type: 3}
+    - target: {fileID: 2669867616223651076, guid: 27367bdd5d3313b4d8cdb64e2e3f0868, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2669867616223651076, guid: 27367bdd5d3313b4d8cdb64e2e3f0868, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LoadingScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2669867616223651076, guid: 27367bdd5d3313b4d8cdb64e2e3f0868, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SceneMG, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2669867616223651076, guid: 27367bdd5d3313b4d8cdb64e2e3f0868, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4854844189688571455, guid: 27367bdd5d3313b4d8cdb64e2e3f0868, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -858,6 +886,6 @@ SceneRoots:
   - {fileID: 1123850189}
   - {fileID: 1283956083}
   - {fileID: 890134381}
+  - {fileID: 1787117041}
   - {fileID: 2116787435803824844}
   - {fileID: 1185560299}
-  - {fileID: 1787117041}

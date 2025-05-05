@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/1.Scene/ESLobby.unity
     guid: 51499804862e0a54ba4efb7ce82d8531
+  - enabled: 1
+    path: Assets/1.Scene/ESLoding.unity
+    guid: 138aafebe1dc67f4abb28157a0502816
+  - enabled: 1
+    path: Assets/1.Scene/0.AstreroidBeltTestScene.unity
+    guid: e2c2d573b9335eb4a8ac3d04a1331cad
   m_configObjects: {}

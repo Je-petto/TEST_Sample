@@ -540,6 +540,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3728003501401453519, guid: e2a31e88a10f73f43ba11bbf49a8565d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e67537081a6a68469aa5761b5249ed1, type: 3}
+    - target: {fileID: 4858367907775370843, guid: e2a31e88a10f73f43ba11bbf49a8565d, type: 3}
+      propertyPath: scenesClip.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858367907775370843, guid: e2a31e88a10f73f43ba11bbf49a8565d, type: 3}
+      propertyPath: scenesClip.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e67537081a6a68469aa5761b5249ed1, type: 3}
+    - target: {fileID: 4858367907775370843, guid: e2a31e88a10f73f43ba11bbf49a8565d, type: 3}
+      propertyPath: scenesClip.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 55414b57c9424c94ea07d9fd695b9118, type: 3}
+    - target: {fileID: 4858367907775370843, guid: e2a31e88a10f73f43ba11bbf49a8565d, type: 3}
+      propertyPath: scenesClip.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 55414b57c9424c94ea07d9fd695b9118, type: 3}
+    - target: {fileID: 4858367907775370843, guid: e2a31e88a10f73f43ba11bbf49a8565d, type: 3}
+      propertyPath: scenesClip.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f516c2cc9079f741848aad03ba9c2ca, type: 3}
+    - target: {fileID: 5097286405766285339, guid: e2a31e88a10f73f43ba11bbf49a8565d, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097286405766285339, guid: e2a31e88a10f73f43ba11bbf49a8565d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097286405766285339, guid: e2a31e88a10f73f43ba11bbf49a8565d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -655,7 +691,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1672376197}
-  - {fileID: 6152307786417011213}
   - {fileID: 1526817548}
+  - {fileID: 6152307786417011213}
   - {fileID: 1302651375466099568}
   - {fileID: 4565858093950510825}

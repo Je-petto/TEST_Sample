@@ -49,10 +49,13 @@ public class SoundMG : MonoBehaviour
 
     public void OnButtonSound()
     {
-        if (!SFXaudio.enabled)
-            SFXaudio.enabled = true;
 
+        if(SFXaudio == false)
         SFXaudio.gameObject.SetActive(true);
+
+        SFXaudio.enabled = !SFXaudio.enabled;
+
         SFXaudio.PlayOneShot(ButtonClip);
+
     }
 }
