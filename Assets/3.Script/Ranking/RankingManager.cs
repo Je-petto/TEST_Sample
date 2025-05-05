@@ -12,7 +12,7 @@ public class RankingManager : MonoBehaviour
     private string filePath;
 
     [System.Serializable]
-    public class PlayerData
+    public class PlayerRankData
     {
         public string playerID;
         public int score;
@@ -21,11 +21,11 @@ public class RankingManager : MonoBehaviour
     [System.Serializable]
     public class RankingData
     {
-        public List<PlayerData> rankings = new List<PlayerData>();
+        public List<PlayerRankData> rankings = new List<PlayerRankData>();
     }
 
     private RankingData rankingData;
-    private PlayerData currentPlayer;
+    private PlayerRankData currentPlayer;
 
     private void Awake()
     {
@@ -36,7 +36,7 @@ public class RankingManager : MonoBehaviour
 
     public void SetCurrentPlayerData(string name, int totalScore)
     {
-        currentPlayer = new PlayerData
+        currentPlayer = new PlayerRankData
         {
             playerID = name,
             score = totalScore

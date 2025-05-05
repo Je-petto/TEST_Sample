@@ -1,7 +1,7 @@
 using System;
 
 [Serializable]
-public class PlayerData
+public class PlayerRankData
 {
     public string playerName;
     public int score;
