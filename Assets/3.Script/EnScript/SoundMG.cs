@@ -46,4 +46,13 @@ public class SoundMG : MonoBehaviour
             BGMaudio.Play();
         }
     }
+
+    public void OnButtonSound()
+    {
+        if (!SFXaudio.enabled)
+            SFXaudio.enabled = true;
+    
+        SFXaudio.gameObject.SetActive(true);
+        SFXaudio.PlayOneShot(ButtonClip);
+    }
 }
